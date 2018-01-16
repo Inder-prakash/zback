@@ -27,7 +27,7 @@ public class MyFilter implements Filter {
    
         ((HttpServletResponse) arg1).addHeader("Access-Control-Allow-Origin", "*");
         ((HttpServletResponse) arg1).addHeader("Access-Control-Allow-Methods","GET, OPTIONS, HEAD, PUT, POST");
- 
+ 	((HttpServletResponse) arg1).addHeader("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
         HttpServletResponse resp = (HttpServletResponse) arg1;
  
         if (request.getMethod().equals("OPTIONS")) {
